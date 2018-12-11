@@ -87,8 +87,11 @@ Stack * staticsem(int lvl, TreeNode *root, Stack *top)
     			}
     		}
     	} else if (strcmp(root->label, "R") == 0){
-    		if(checkStack(top, root->head->tok->tokenName) != 1){
-    			printf("Error in static semantics, tree level %d! Variable %s is not defined in stack! Exiting..\n", lvl, root->head->tok->tokenName);
+    		if(root->head->tok->tokenID == 1000){
+    			// printf("Token ID: %d\n", root->head->tok->tokenID);
+    			if(checkStack(top, root->head->tok->tokenName) != 1){
+    				printf("Error in static semantics, tree level %d! Variable %s is not defined in stack! Exiting..\n", lvl, root->head->tok->tokenName);
+    			}
     		}
     	}                 
 
