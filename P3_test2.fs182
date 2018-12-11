@@ -1,0 +1,9 @@
+void
+var x : 1 
+var y : 1
+start
+  var z : 1
+  start
+    out [ x + y + z ] .
+  stop
+stop
